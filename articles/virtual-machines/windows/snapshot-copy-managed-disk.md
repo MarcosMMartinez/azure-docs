@@ -33,7 +33,7 @@ For more information, see [Azure PowerShell Versioning](/powershell/azure/overvi
 ## Copy the VHD with a snapshot
 Use either the Azure portal or PowerShell to take a snapshot of the Managed Disk.
 
-### Use Azure portal to take a snapshot 
+ ### Use Azure portal to take a snapshot 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Starting in the upper left, click **New** and search for **snapshot**.
@@ -70,7 +70,7 @@ $disk = Get-AzureRmDisk -ResourceGroupName $resourceGroupName -DiskName $dataDis
 3. Create the snapshot configurations. 
 
  ```powershell
-$snapshot =  New-AzureRmSnapshotConfig -SourceUri $disk.Id -CreateOption Copy -Location $location 
+$snapshot =  New-AzureRmSnapshotConfig -SourceUri $disk.Id -AccountType PremiumLRS/etc. -CreateOption Copy -Location $location 
 ```
 4. Take the snapshot.
 
